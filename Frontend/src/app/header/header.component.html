@@ -1,0 +1,24 @@
+<header class="header">
+    <a routerLink="/" class="logo">
+        <img src="./assets/image/logo.jpg" alt="">
+    </a>
+    <nav class="navbar">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About Us</a>
+        <a routerLink="/Education " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Education</a>
+        <a routerLink="/News" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">News</a>
+        <a routerLink="/ Parent Portal" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Parent
+            Portal</a>
+        <a routerLink="/Contact " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact Us</a>
+
+
+    </nav>
+    <div class="icons">
+        <div class="fas fa-search " id="search-btn" (click)="toggleSearch()"></div>
+        <div class="fas fa-bars " id="menu-btn" (click)="toggleMenu()"></div>
+    </div>
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here ...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+</header>

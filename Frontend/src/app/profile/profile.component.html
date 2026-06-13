@@ -1,0 +1,136 @@
+<div class="row m-8 test" style="padding-left: 100px">
+    <div class="card col-md-5 text-center" style="margin-top: 80px; background-color: ghostwhite">
+        <div class="col divmg">
+            <div style="margin-top: 2px">
+                <img [src]="image" class="rounded-circle" width="100" height="100"
+                    (click)="profileUplod.click()" /><br />
+                <div>
+                    <input type="file" hidden #profileUplod (change)="ImageUpload($event)" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <!-- <h2>{{ Nom }} {{ Prenom }}</h2> -->
+                <small class="form-text text-muted">Adress, 12345</small>
+            </div>
+            <div class="col mb-3" style="margin-top: 50px">
+                <button type="button" (click)="edit(1)" class="btn btn-danger"
+                    style="width: 60 px; margin-left: 20px; margin-right: 9px" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="fa fa-address-card-o"></i>&nbsp;Edit Profile
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    (click)="UpdataPassword()">
+                    <i class="fas fa-lock"></i>&nbsp;Edit Password
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="card col-md-7 mr-3" style="margin-top: 80px; width: 50%; background-color: ghostwhite">
+        <table class="table margtable  table-spaced">
+            <tbody *ngFor="let i of alluserdata">
+
+                <th scope="col">Student Name</th>
+                <td>{{i.Student}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Date Of Brith</th>
+                    <td>{{i.dateNaissance}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Parent Name</th>
+                    <td>{{i.Parent}}</td>
+                </tr>
+
+                <tr>
+                    <th scope="col">Phone Number</th>
+                    <td>{{i.phone}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Email</th>
+                    <td>{{i.email}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Password</th>
+                    <td>*********</td>
+                </tr>
+                <tr>
+                    <th scope="col">Gender</th>
+                    <td>{{i.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- <div class="d-flex">
+    <button class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="add()"style="margin-left:800px ;margin-top: 10px">
+      Add User
+    </button>
+  </div> -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div style="background: hsla(205, 46%, 30%, 1);" class="modal-header">
+                <h5 style="color: aliceblue;font-size: 26px;margin-left: 62px;font-weight: 620;" class="modal-title"
+                    id="exampleModalLabel">USER MAISONLOC</h5>
+                <button type="button" class="btn-close" style="background-color: red;" data-bs-dismiss="modal"
+                    aria-label="Close">
+
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="form-group">
+                        <input type="text" formControlName="nom" class="form-control" aria-describedby="emailHelp"
+                            placeholder="First Name">
+                        <small *ngIf="formValue.get('nom')?.invalid && formValue.get('nom')?.touched"
+                            class="text-danger">First Name is Required</small>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="text" formControlName="prenom" class="form-control" aria-describedby="emailHelp"
+                            placeholder="Last Name">
+                        <small *ngIf="formValue.get('prenom')?.invalid && formValue.get('prenom')?.touched"
+                            class="text-danger">Last Name is Required</small>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="date" formControlName="dateNaissance" class="form-control"
+                            aria-describedby="emailHelp" placeholder="Date Of Brith">
+                        <small
+                            *ngIf="formValue.get('dateNaissance')?.invalid && formValue.get('dateNaissance')?.touched"
+                            class="text-danger">Date is Required</small>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="number" formControlName="phone" class="form-control" aria-describedby="emailHelp"
+                            placeholder="Phone Number">
+                        <small *ngIf="formValue.get('phone')?.invalid && formValue.get('phone')?.touched"
+                            class="text-danger">Phone is Required</small>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="email" formControlName="email" class="form-control" aria-describedby="emailHelp"
+                            placeholder="Email">
+                        <small *ngIf="formValue.get('email')?.invalid && formValue.get('email')?.touched"
+                            class="text-danger">Email is Required</small>
+                    </div><br>
+                    <div class="form-group">
+                        <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                        <small *ngIf="formValue.get('password')?.invalid && formValue.get('password')?.touched"
+                            class="text-danger">Password is Required</small>
+                    </div> <br>
+                    <div class="form-group">
+                        <mat-radio-group formControlName="gender">
+                            <mat-radio-button value="male">Male</mat-radio-button>
+                            <mat-radio-button value="female" style="margin-left:150px;">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" style="background: hsla(205, 46%, 30%, 1);">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button *ngIf="showadd" type="button" class="btn btn-primary" (click)="addProfile()">Save</button>
+                <button *ngIf="showupdate" type="button" class="btn btn-primary"
+                    (click)="UpdateProfile()">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

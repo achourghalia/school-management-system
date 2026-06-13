@@ -1,0 +1,170 @@
+.header {
+    background: rgb(195, 4, 4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+
+.header .logo img {
+    height: 6rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+
+}
+
+.header .navbar a {
+    margin: 0 2rem;
+    font-size: 2rem;
+    color: black;
+    left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header .navbar a:hover {
+    color: rgb(248, 242, 239);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.header.icons div:hover {
+    color: rgb(109, 25, 6);
+}
+
+#menu-btn {
+    display: none;
+    position: relative;
+}
+
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 2%;
+    width: 20rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    background: white;
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+    display: flex;
+
+
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem;
+    text-transform: none;
+    transform: scaleY(1);
+    transform-origin: top;
+
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: .7rem;
+    color: black;
+    margin-left: .7rem;
+
+}
+
+.header .search-form label:hover {
+    color: rosybrown;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* medi queries*/
+@media (max-width : 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+
+}
+
+@media (max-width : 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: rgb(174, 6, 6);
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active {
+        right: 0;
+    }
+
+    .header .navbar a {
+        color: black;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+
+    }
+
+    .header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
+
+}
+
+@media (max-width : 450px) {
+
+
+    html {
+        font-size: 50%;
+    }
+
+
+}

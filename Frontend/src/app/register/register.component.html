@@ -1,0 +1,86 @@
+<Section class="container">
+    <header>PRE-REGISTRATION</header>
+    <form action="#" method="form">
+        <div class="input-box">
+            <label for="student-name">Student's Name</label>
+            <input type="text" [(ngModel)]="studentname" class="form-control" id="student-name" class="form-control"
+                placeholder="Enter Full name" required>
+
+        </div>
+        <div class="gender-box">
+            <h4>Gender</h4>
+            <div class="gender-option">
+                <div class="gender">
+                    <input type="radio" name="gender" id="check-male">
+                    <label for="check-male">Male</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender" id="check-female">
+                    <label for="check-female">Female</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender" id="check-other">
+                    <label for="check-other">Other</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label for="old-school">Old School </label>
+            <input type="text" id="old-school" placeholder="Enter old school" required>
+
+        </div>
+        <div class="input-box">
+            <label for="class">Class</label>
+
+            <div class="column">
+
+                <div class="select-box">
+                    <select id="class" placeholder="choose your class" required>
+                        <option>Y1</option>
+                        <option>Y2</option>
+                        <option>Y3</option>
+                        <option>Y4</option>
+                        <option>Y5</option>
+                        <option>Y6</option>
+
+                    </select>
+                </div>
+
+            </div>
+        </div>
+        <div class="column">
+
+            <div class="input-box">
+                <label for="birth-date">Birth Date</label>
+                <input type="date" id="birth-date" placeholder="Enter Birth daye" required>
+            </div>
+        </div>
+
+
+        <div class="input-box">
+            <label for="parent-name">Parent's Name </label>
+            <input type="text" [(ngModel)]="parentname" class="form-control" id="parent-name" class="form-control"
+                placeholder="Enter parent name" required>
+
+        </div>
+        <div class="input-box">
+            <label for="email">Email Adress</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email adress" required>
+
+        </div>
+        <div class="column">
+            <div class="input-box">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required>
+            </div>
+
+        </div>
+        <div class="input-box">
+            <label for="adress">Adress</label>
+            <input type="text" id="adress" placeholder="Enter street adress" required>
+        </div>
+
+        <button class="style" type="submit" (click)="save()">Submit</button>
+    </form>
+</Section>

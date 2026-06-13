@@ -1,0 +1,130 @@
+* {
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(243, 224, 231);
+
+}
+
+
+
+.container .heading {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.container .heading h1 {
+    color: rgb(71, 36, 36);
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.wrapper {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+    margin: 0px 25px;
+    transition: 0.4s ease;
+
+}
+
+.content:hover {
+    transform: translateY(-10px);
+}
+
+.content .h2 {
+    font-size: 30px;
+    color: rgb(44, 121, 184);
+}
+
+.content p {
+    color: rgb(61, 61, 61);
+    font-size: 19px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.content .btn {
+    position: relative;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 2px solid rgb(98, 33, 33);
+    font-size: 19px;
+    color: rgb(102, 45, 45);
+    padding: 13px 16px;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+
+}
+
+.content .btn ::before {
+    position: relative;
+    content: "";
+    border: 1px solid transparent;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transfoem 0.7s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.5, 0.4, 0.7);
+    transform: scalex(0);
+}
+
+.content .btn :hover {
+    background-color: blue;
+}
+
+
+.content .btn :hover::before {
+    transform: scaleX(1);
+}
+
+.image {
+    width: 50%;
+}
+
+.image :hover {
+    transform: translateY(-10px);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:768px) {
+    .warpper {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .container .heading h1 {
+        font-size: 40px;
+    }
+
+    .content,
+    .image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .content h2 {
+        font-size: 25px;
+    }
+
+    .content .btn {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+}

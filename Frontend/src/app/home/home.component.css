@@ -1,0 +1,143 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkite-scrollbar {
+    width: .8rem;
+
+}
+
+html::-webkite-scrollbar-track {
+    background: transparent;
+
+}
+
+html::-webkite-scrollbar-thumb {
+    background: #fff;
+    border-radius: 7rem;
+}
+
+body {
+    background: white;
+}
+
+
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .2rem 1rem;
+    font-size: 2rem;
+    color: rebeccapurple;
+    background: rgb(222, 157, 230);
+    cursor: pointer;
+    text-align: center;
+    background-position: left;
+
+
+}
+
+.btn:hover {
+    letter-spacing: .1rem;
+    background-color: rgb(188, 94, 211);
+}
+
+.Home {
+    height: 100vh;
+    background-size: cover;
+    background: fixed;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-attachment: fixed;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 100px;
+    transition: none;
+
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.carousel-item.active img {
+    height: 100%;
+    min-height: 80%;
+    /* Assure que l'image remplit complètement la hauteur de l'élément parent */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: auto;
+    object-fit: cover;
+    /* Ajoutez cette ligne pour annuler les transitions */
+
+
+}
+
+.carousel-caption h3 {
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Ajoute une ombre de texte */
+    padding: 10px;
+    /* Ajoutez un espace autour du texte si nécessaire */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Définissez la couleur d'arrière-plan avec une opacité */
+
+}
+
+
+
+
+
+
+
+/* medi queries*/
+@media (max-width : 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+
+
+
+}
+
+@media (max-width : 768px) {
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width : 450px) {
+
+
+    html {
+        font-size: 50%;
+    }
+
+
+}
