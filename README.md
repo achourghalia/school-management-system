@@ -119,22 +119,22 @@ http://localhost:4200
 
 ### Home Page
 
-![Home Page](../docs/home.png)
+![Home Page](./docs/home.png)
 
 ### Login Page
 ![Login Page](./docs/login.png)
 
 ### Contact Page
-![Contact Page](docs/contact.png)
+![Contact Page](./docs/contact.png)
 
 ### News Page
-![News Page](docs/news.png)
+![News Page](./docs/news.png)
 
 ### Inscription Page
-![Inscription Page](docs/inscription.png)
+![Inscription Page](./docs/inscription.png)
 
 ### Dashboard
-![Dashboard](docs/dashboard.png)
+![Dashboard](./docs/dashboard.png)
 
 ### Add Teacher
-![Add Teacher](docs/add_teacher.png)
+![Add Teacher](./docs/add_teacher.png)
