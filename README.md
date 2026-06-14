@@ -118,7 +118,8 @@ http://localhost:4200
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](./docs/home.png)
+
+![Home Page](../docs/home.png)
 
 ### Login Page
 ![Login Page](./docs/login.png)
