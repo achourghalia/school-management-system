@@ -126,6 +126,3 @@ http://localhost:4200
 ![Dashboard](docs/Add_student.png)
 ![Dashboard](docs/pay_fee.png)
 
-## 🎥 Demo Video
-
-https://raw.githubusercontent.com/USERNAME/REPO/main/docs/video/elite_video.mp4
