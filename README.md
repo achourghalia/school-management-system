@@ -116,13 +116,13 @@ Frontend runs at:
 http://localhost:4200
 
 📸 Screenshots
-![Home Page](docs/home.png)
-![Login Page](docs/login.png)
-![Dashboard](docs/contact.png)
-![Dashboard](docs/news.png)
-![Dashboard](docs/inscription.png)
-![Dashboard](docs/dashboard.png)
-![Dashboard](docs/add_teacher.png)
-![Dashboard](docs/Add_student.png)
-![Dashboard](docs/pay_fee.png)
+![Home Page](./docs/home.png)
+![Login Page](./docs/login.png)
+![Dashboard](./docs/contact.png)
+![Dashboard](./docs/news.png)
+![Dashboard](./docs/inscription.png)
+![Dashboard](./docs/dashboard.png)
+![Dashboard](./docs/add_teacher.png)
+![Dashboard](./docs/Add_student.png)
+![Dashboard](./docs/pay_fee.png)
 
